@@ -2,9 +2,8 @@ image: ubuntu
 
 test_script:
 #- ps: dir1
-- ps: $progressPreference = 'SilentlyContinue'
-- ps: bash -c ls; $?; $LASTEXITCODE; $Error
-#- ps: bash -c 'ls aaa'; $?; $LASTEXITCODE; $Error
-- ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force; $?; $LASTEXITCODE; $Error
+- ps: bash -c ls
+#- ps: bash -c 'ls aaa'
+- ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force
 
 build: off
