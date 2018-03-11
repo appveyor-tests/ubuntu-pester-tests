@@ -1,6 +1,7 @@
 image: ubuntu
 
 test_script:
-- pwsh -c Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser
+- ps: Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser
+- ps: $Error
 
 build: off
