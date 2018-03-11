@@ -4,7 +4,7 @@ test_script:
 #- ps: dir1
 - ps: $progressPreference = 'SilentlyContinue'
 - ps: bash -c ls; $?; $Error
-- ps: bash -c 'ls aaa'; $?; $Error
+#- ps: bash -c 'ls aaa'; $?; $Error
 - ps: Install-Module -Name Pester -Repository PSGallery; $?; $Error
 
 build: off
