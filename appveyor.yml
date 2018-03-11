@@ -1,6 +1,7 @@
 image: ubuntu
 
 test_script:
+- ps: dir1
 - ps: Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser; $Error
 
 build: off
