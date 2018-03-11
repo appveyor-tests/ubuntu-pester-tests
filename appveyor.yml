@@ -3,8 +3,8 @@ image: ubuntu
 test_script:
 #- ps: dir1
 - ps: $progressPreference = 'SilentlyContinue'
-- ps: cmd /c dir c:\; $?; $Error
-- ps: cmd /c dir ddd; $?; $Error
+- ps: bash -c ls; $?; $Error
+- ps: bash -c ls aaa; $?; $Error
 - ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force; $?; $Error
 
 build: off
