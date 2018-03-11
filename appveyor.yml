@@ -3,6 +3,6 @@ image: ubuntu
 test_script:
 #- ps: dir1
 - ps: $progressPreference = 'SilentlyContinue'
-- ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser; $Error
+- ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force; $Error
 
 build: off
