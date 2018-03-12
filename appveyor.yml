@@ -1,7 +1,7 @@
 image: ubuntu
 
 test_script:
-- ps: ./tests/debug.ps1; $?; $LastExitCode; $Error
+- ps: ./tests/debug.ps1; if ($LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0) { "problem!" }
 #- ps: dir1
 - ps: bash -c ls
 #- ps: bash -c 'ls aaa'
