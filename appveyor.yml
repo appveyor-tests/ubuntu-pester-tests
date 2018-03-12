@@ -1,7 +1,7 @@
 image: ubuntu
 
 test_script:
-- ps: .\tests\debug.ps1
+- ps: ./tests/debug.ps1
 #- ps: dir1
 - ps: bash -c ls
 #- ps: bash -c 'ls aaa'
