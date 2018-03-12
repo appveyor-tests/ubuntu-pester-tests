@@ -3,14 +3,14 @@ image: ubuntu
 test_script:
 - ps: |
     ./tests/debug.ps1; $?;
-		$exitCode = 0
-		$errorResult = 'False'
+    $exitCode = 0
+    $errorResult = 'False'
 
-		if ($LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0) {
-			$exitCode = $LASTEXITCODE
-		} elseif (-not $?) {
-			$errorResult = 'True'
-		}
+    if ($LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0) {
+      $exitCode = $LASTEXITCODE
+    } elseif (-not $?) {
+      $errorResult = 'True'
+    }
     $exitCode
     $errorResult
 
