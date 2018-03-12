@@ -1,7 +1,19 @@
 image: ubuntu
 
 test_script:
-- ps: ./tests/debug.ps1; if ($LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0) { "problem!" }
+- ps: |
+    ./tests/debug.ps1; $?;
+		$exitCode = 0
+		$errorResult = 'False'
+
+		if ($LASTEXITCODE -ne $null -and $LASTEXITCODE -ne 0) {
+			$exitCode = $LASTEXITCODE
+		} elseif (-not $?) {
+			$errorResult = 'True'
+		}
+    $exitCode
+    $errorResult
+
 #- ps: dir1
 - ps: bash -c ls
 #- ps: bash -c 'ls aaa'
