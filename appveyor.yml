@@ -5,8 +5,8 @@ test_script:
 #- ps: dir1
 - bash -c 'ls -al'
 - ps: bash -c 'ls -al'
-- ps: bash -c 'ls aaa'
-#- ps: Write-Host1 'Hello!'
+#- ps: bash -c 'ls aaa'
+- ps: Write-Host1 'Hello!'
 - ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force
 
 build: off
