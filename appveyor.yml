@@ -3,6 +3,7 @@ image: ubuntu
 test_script:
 #- ps: ./tests/debug.ps1
 #- ps: dir1
+- bash -c 'ls -al'
 - ps: bash -c 'ls -al'
 #- ps: bash -c 'ls aaa'
 - ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force
