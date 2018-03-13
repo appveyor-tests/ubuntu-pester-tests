@@ -6,6 +6,7 @@ test_script:
 - bash -c 'ls -al'
 - ps: bash -c 'ls -al'
 #- ps: bash -c 'ls aaa'
+- ps: Write-Host 'Hello!'
 - ps: Install-Module -Name Pester -Repository PSGallery -Scope CurrentUser -Force
 
 build: off
