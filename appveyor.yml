@@ -1,6 +1,7 @@
 image: ubuntu
 
 test_script:
+- cat /home/appveyor/basicconfig.log
 #- ps: ./tests/debug.ps1
 #- ps: dir1
 - bash -c 'ls -al'
